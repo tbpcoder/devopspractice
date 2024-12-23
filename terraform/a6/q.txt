@@ -1,0 +1,2 @@
+Write terraform script for the given architecture.
+Deploy this ansible on the servers https://github.com/tbpcoder/ansible-project-comments-app.

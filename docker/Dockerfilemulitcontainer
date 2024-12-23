@@ -1,0 +1,11 @@
+# Example of a multi-stage Dockerfile
+
+FROM golang AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o myapp
+
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=builder /app/myapp .
+ENTRYPOINT ["./myapp"]

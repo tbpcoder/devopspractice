@@ -1,0 +1,121 @@
+1. cat -n file.txt
+2. chmod 700 file.txt
+3. history | tail -n 10
+4. rm -rf dir_name
+5. vim fruites.txt; cat fruites.txt
+6. echo -e "Apple\nMango\nBanana" > devops.txt; echo "Pineapple" >> devops.txt
+7. head -n 3 devops.txt | tac
+8. tail -n 3 devops.txt | sort
+9. comm -12 <(sort fruites.txt) <(sort colors.txt)
+10. wc fruites.txt
+
+1. uname -a; lscpu
+2. uptime; journalctl --since "2 hours ago" | grep -i load
+3. date; sudo date --set="2024-12-06 10:30:00"
+4. which python
+5. journalctl -u servicename
+
+1. who, users
+2.  sudo useradd -m -s /bin/bash john
+    sudo useradd -m -s /bin/bash emma
+    sudo passwd john
+    sudo passwd emma
+3. sudo groupadd project_team; sudo gpasswd -a john project_team; sudo gpasswd -a emma project_team
+4. id james; groups james; sudo gpasswd -a james shared
+5. sudo usermod -s /bin/zsh emma; sudo passwd -l emma
+6. sudo usermod -aG admins john
+7. id john; id emma
+8. sudo groupdel project_team; sudo userdel -r john; sudo userdel -r emma
+9. sudo groupadd testers; sudo gpasswd -M bob,jane,kate testers
+10. id old_user; sudo userdel -r old_user
+
+1. umask sets the default permissions for newly created files and directories. It subtracts permission bits from the default permission set (666 for files, 777 for directories) to determine the file's permissions. For example, a umask of 022 means newly created files will have 644 permissions, and directories will have 755 permissions.
+2. umask 022
+3. chown developer:devgroup filename
+4. chgrp admin /var/log/*
+5. chmod 700 /backup/; chown backup_user:backup_user /backup/
+6. tar -cvzf backup.tar.gz /home/user/data/
+7. tar -xvzf backup.tar.gz --preserve-permissions
+8. zip archive.zip file1.txt file2.txt file3.txt
+9. unzip archive.zip -d /path/to/directory
+10. rsync -avz /project/data/ user@remote:/path/to/destination/
+11. rsync -avzu /project/data/ user@remote:/path/to/destination/
+12. chmod -R 755 /path/to/directory/
+
+1. ps aux
+2. pgrep nginx
+3. ps -eo pid,user,cmd
+4. top
+5. htop
+6. fuser /var/log/syslog
+7. kill -9 1234
+8. killall apache
+9. free -h
+10. nohup ./script.sh &
+11. fg
+12. vmstat
+13. renice 10 -p 5678
+14. ps aux | grep process_name | awk '{print $2}'
+15. renice 19 -p 4321
+16. pgrep -f backup.sh
+17. fuser /tmp/shared.log
+
+1. netstat -tuln; ss -tuln
+2. ifconfig; ip addr show
+3. traceroute google.com; tracepath google.com
+4. mtr google.com
+5. nslookup example.com; dig example.com
+6. telnet <hostname> <port>; nc -zv <hostname> <port>
+7. hostname; hostnamectl set-hostname <new-hostname>
+8. ip addr add 192.168.1.100/24 dev eth0
+9. dig example.com ANY
+10. whois example.com
+11. arp -a; arp -d <IP>
+12. curl -O http://example.com/file.txt; wget http://example.com/file.txt
+13. iptables -L
+14. watch -n 1 ss -tuln; watch -n 1 ifconfig
+15. nmap -sP 192.168.1.0/24
+16. route -n; ip route show
+17. ncat -l 1234; ncat <server> 1234
+18. route add -net 192.168.1.0/24 gw 192.168.1.1; ip route add 192.168.1.0/24 via 192.168.1.1
+19. grep "network" /var/log/syslog; grep -i "error" /var/log/messages
+20. ifstat
+21. curl -I http://example.com
+22. curl -s -w "%{time_total}\n" -o /dev/null http://example.com
+23. nmap -p- 192.168.1.1
+24. dig example.com ANY
+25. ifstat -i eth0 1
+26. nc -zv <server> <port>
+27. ss -tuln; netstat -tuln
+28. watch -n 1 ifconfig; watch -n 1 ip -s link
+29. ip route show; route -n
+30. ss -tuln | awk '{print $1, $2, $5}'; ss -tuln | sed -n '2,$p'
+
+1. lsblk
+2. df -h
+3. du -sh /home/user
+4. pvcreate /dev/sdb
+5. vgcreate vg_data /dev/sdb1 /dev/sdb2
+6. pvs
+7. vgs
+8. lvcreate -L 5G -n lv_docs vg_data
+9. mkfs -t ext4 /dev/vg_data/lv_docs
+10. mount /dev/vg_data/lv_docs /mnt/docs
+11. mount | column -t
+12. umount /mnt/docs
+13. lvremove /dev/vg_data/lv_docs
+14. vgremove vg_data
+15. du -sh /var/*
+
+1. head <file_name>
+2. tail <file_name>
+3. tail -f <file_name>
+4. less <file_name>
+5. more <file_name>
+6. grep <pattern> <file_name>
+7. grep -i <pattern> <file_name>
+8. grep -r <pattern> <directory_name>
+9. awk '{print $1}' <file_name>
+10. sed 's/<old>/<new>/' <file_name>
+11. cut -d' ' -f1 <file_name>
+12. logrotate <config_file>

@@ -1,0 +1,126 @@
+Basic commands
+1) View the content of a file and display line numbers.
+2) Change the access permissions of files to make them readable, writable, and executable by the owner only.
+3) Check the last 10 commands you have run.
+4) Remove a directory and all its contents.
+5) Create a fruits.txt file, add content (one fruit per line), and display the content.
+6) Add content in devops.txt (one in each line) - Apple, Mango, Banana. Then, append "Pineapple" to the end of the file.
+7) Show the first three fruits from the file in reverse order.
+8) Show the bottom three fruits from the file, and then sort them alphabetically.
+9) Find and display the lines that are common between fruits.txt and Colors.txt.
+10) Count the number of lines, words, and characters in fruits.txt.
+
+System commands
+1) The application support team asks for the Linux kernel version, operating system, and CPU architecture to debug an issue with a new application deployment.
+2) Your manager asks for the server's uptime and whether the system has experienced high load in the last few hours.
+3) A cron job fails to execute, and you suspect the system's date and time are incorrect. You also need to set the server time to 10:30 AM, December 6, 2024.
+4) The python command isn’t behaving as expected, and you need to determine where it is located in the system PATH.
+5) A critical service is failing, and you need to investigate its logs.
+
+User managmenet
+1) Before restarting a shared Linux server, you need to check who is currently logged in.
+2) Create two users, john and emma, with home directories and Bash shells. Set secure passwords for them.
+3) Create a group named project_team and add both users to it.
+4) You need to check which groups the user james belongs to and ensure their access to a shared directory.
+5) You need to update the shell of user emma to /bin/zsh and lock her account temporarily.
+6) Grant john additional access to an admins group.
+7) Verify the group memberships of both users.
+8) Remove the project_team group and delete both users along with their home directories.
+9) You need to add multiple users (bob, jane, and kate) to a group named testers for a short-term task.
+10) You suspect there are unused or stale accounts on the server. Identify and delete a user old_user along with their home directory and files.
+
+File permission commands
+1) What does the umask command do? 
+2) What command would you use to set the default file permissions for newly created files to 644?
+3) How do you change the ownership of a file to user developer and group devgroup?
+4) What command will you use to change the group ownership of files in a directory /var/log/ to admin?
+5) How can you ensure that a directory /backup/ and its contents are only accessible by backup_user?
+6) How would you create a .tar.gz backup of the directory /home/user/data/?
+7) What command would you use to extract a .tar.gz file while preserving file permissions?
+8) How can you compress multiple files into a .zip file?
+9) What command would you use to extract a .zip file to a specific directory?
+10) How do you sync a local directory /project/data/ to a remote server with the same file attributes (timestamps, permissions, etc.)?
+11) What command would you use to sync only newer files from the local directory to the remote server?
+12) How can you apply the same file permissions recursively to all files within a directory?
+
+Processes
+1) How can you list all running processes along with detailed information?
+2) What command would you use to find the process ID of a running service named nginx?
+3) How can you display only the PID, user, and command of all running processes using ps?
+4) How would you monitor real-time system processes and their resource usage?
+5) If you want a more user-friendly and interactive way to monitor processes, what command will you use?
+6) How can you determine which process is using a file or port, such as /var/log/syslog?
+7) How would you forcefully terminate a process with PID 1234?
+8) If you want to kill all instances of a process named apache, which command would you use?
+9) How can you check the system’s memory usage in a human-readable format?
+10) How would you run a long-running process, such as a script, in the background so it continues even after you log out?
+11) If a process is running in the background, how can you bring it back to the foreground?
+12) Which command would you use to display system performance statistics like CPU usage, memory usage, and disk I/O?
+13) If you want to reduce the priority of a process with PID 5678, what command would you use?
+14) How can you combine ps and grep to find a process by name and display its PID only?
+15) A process is running with PID 4321, but it’s consuming too much CPU. How can you change its priority to make it less CPU-intensive?
+16) You notice that a script named backup.sh is taking longer than expected. How can you check if it’s still running?
+17) How can you identify which processes are currently accessing a shared file, such as /tmp/shared.log?
+
+Networking
+1) How can you display all active network connections and their statuses?
+2) Which command would you use to check the configuration of all network interfaces?
+3) How would you trace the path packets take to a destination, such as google.com?
+4) What command combines the functionality of ping and traceroute for network diagnostics?
+5) How can you resolve the IP address of a domain, such as example.com, using DNS?
+6) What command would you use to check if a specific port on a remote server is open?
+7) How can you display or change the hostname of your system?
+8) What command allows you to assign an IP address to a network interface?
+9) How would you query DNS for detailed information about a domain, such as its nameservers?
+10) Which command can you use to retrieve information about a domain's registration and ownership?
+11) How can you view or modify the system’s ARP cache?
+12) What command would you use to download a file from a URL? Provide examples for both HTTP and FTP.
+13) How can you list the current firewall rules on your Linux system?
+14) Which command would you use to repeatedly monitor network statistics or another command’s output?
+15) How can you scan a network for devices and open ports?
+16) What command allows you to view or modify the system’s IP routing table?
+17) How can you use ncat to listen on a specific port and echo received data?
+18) What is the command to add a static route to the routing table?
+19) How would you filter network-related logs from a large text file using grep?
+20) Which command displays real-time statistics for all network interfaces?
+21) How can you retrieve HTTP headers from a website using curl?
+22) What is the command to test network latency by sending HTTP requests repeatedly?
+23) How would you scan for open ports on a specific IP address using nmap?
+24) What command would you use to display all DNS records for a specific domain?
+25) How can you check the current bandwidth usage of a specific network interface?
+26) Which command allows you to test connectivity to a remote server on a specific port without logging in?
+27) What is the difference between ss and netstat when viewing network connections?
+28) How can you use watch to monitor changes in the network interface statistics over time?
+29) What command displays information about network routing, such as gateway and interface details?
+30) How can you use sed or awk to extract specific fields from a list of active connections?
+
+Volumes
+1) How can you list all available block devices and their details like size and mount points?  
+2) What command shows the disk space usage of all mounted file systems in human-readable format?  
+3) How can you find the size of a specific directory, such as /home/user?  
+4) What is the command to create a physical volume for LVM on a disk /dev/sdb?  
+5) How can you create a volume group named vg_data on /dev/sdb1 and /dev/sdb2?  
+6) What command lists all physical volumes (PVs) in the system?  
+7) How can you list all volume groups (VGs) and their details, such as size and free space?  
+8) How do you create a logical volume named lv_docs of size 5GB from the volume group vg_data?  
+9) What is the command to create an ext4 file system on a logical volume /dev/vg_data/lv_docs?  
+10) How can you mount the newly created file system to /mnt/docs?  
+11) How can you check the current mount points and their options?  
+12) What command unmounts a file system mounted at /mnt/docs?  
+13) How can you remove a logical volume, such as /dev/vg_data/lv_docs?  
+14) How can you remove a volume group, such as vg_data?  
+15) How can you display the disk usage of all directories and subdirectories under /var in a human-readable summary format?  
+
+Log managmenet
+1) What command would you use to display the first 10 lines of a log file?
+2) How can you view the last 10 lines of a log file?
+3) What command can you use to monitor a log file in real-time as new entries are added?
+4) How would you navigate through a log file page by page in the terminal?
+5) Which command allows you to display a file one page at a time, but with fewer features than `less`?
+6) What command can you use to search for a specific pattern in a log file?
+7) How can you search for a pattern in a log file without considering case sensitivity?
+8) How would you search for a pattern in all files within a directory and its subdirectories?
+9) Which command allows you to extract and print specific columns or patterns from a log file?
+10) What command can be used to perform search and replace operations in a file?
+11) Which command would you use to extract specific columns or fields from a log file?
+12) What command can be used to automatically rotate, compress, and delete old log files to free up disk space?

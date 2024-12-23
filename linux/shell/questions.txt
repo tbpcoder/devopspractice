@@ -1,0 +1,23 @@
+Basic Questions:
+1. Check if a file exists and is readable
+2. Print the first 10 lines of a file
+3. Factorial of a number
+4. Check if a string is a palindrome
+
+Intermediate Questions:
+1. Write a script to find all .txt files in a directory and count the number of lines in each file.
+2. Monitor disk usage and send an alert if it exceeds 80%
+3. Search and replace a string in a file
+4. Back up files and compress them
+5. Write a script to check and restart a service if it is not running.
+6. Write a script to display the top 5 processes consuming the most memory.
+7. Parse a log file for unique IPs
+8. Schedule a daily task with cron
+9. Generate a system health report
+10. Write a script that continuously monitors a log file (app.log) and alerts if the word ERROR is found.
+11. Write a script that accepts a username as cmd args and checks if the user exists on the system. If not, it creates the user.
+12. Write a script that tries to copy a file. If the operation fails, it logs an error to error.log and exits with status 1.
+
+Advanced Questions:
+1. Write a script to automate the creation of users on a Linux system from a CSV file.
+2. Write a script to fetch the current weather information from an API (e.g., OpenWeatherMap) and display it in the terminal.Write a script to fetch the current weather information from an API (e.g., OpenWeatherMap) and display it in the terminal.
